@@ -1,4 +1,6 @@
 "use strict";
+let counter =0 
+
 let userName = prompt ('What is your name ?');
 console.log (userName)
 alert('Hello '+userName +' Welcome to my website! :)')
@@ -8,9 +10,13 @@ console.log (q1)
 switch (q1) {
     case 'yes':
     alert ('Your answer is correct!');
+    counter++;
+
     break;
     case 'y':
     alert ('Your answer is correct!');
+    counter++;
+
     break;
     default:
     alert ('Your answer is wrong :(');
@@ -22,9 +28,13 @@ console.log (q2)
 switch (q2) {
     case 'yes':
     alert ('Your answer is correct!');
+    counter++;
+
     break;
     case 'y':
     alert ('Your answer is correct!');
+    counter++;
+
     break;
     default:
     alert ('Your answer is wrong :(');
@@ -36,9 +46,13 @@ console.log (q3)
 switch (q3) {
     case 'no':
     alert ('Your answer is correct!');
+    counter++;
+
     break;
     case 'n':
     alert ('Your answer is correct!');
+    counter++;
+
     break;
     default:
     alert ('Your answer is wrong :(');
@@ -50,9 +64,13 @@ console.log (q4)
 switch (q4) {
     case 'yes':
     alert ('Your answer is correct!');
+    counter++;
+
     break;
     case 'y':
     alert ('Your answer is correct!');
+    counter++;
+
     break;
     default:
     alert ('Your answer is wrong :(');
@@ -64,9 +82,11 @@ console.log (q5)
 switch (q5) {
     case 'no':
     alert ('Your answer is correct!');
+    counter++;
     break;
     case 'n':
     alert ('Your answer is correct!');
+    counter++;
     break;
     default:
     alert ('Your answer is wrong :(');
@@ -76,7 +96,6 @@ switch (q5) {
 let q6 = Number(prompt ('Can you guess What my favorite number between 1-15 is ?'));
 
 //while ( q6 !== 12){prompt ('Your answer is not correct please enter a number between 1-15 :')}
-let counter =0 
 for(let i=0; i<3 ;i++){ 
     if (q6===12)
     {
@@ -98,7 +117,7 @@ alert ('The correct answer is 12 :) !');
 
 let favMath = ['Linear Algebra', 'Number Theory', 'ODEs', 'PDEs', 'Topology', 'Prob. &Stat.', 'Math. Methods']
 
-let q7 = prompt ('My Favorite Math course is ( linear algebra, Number Theory, ODEs, PDEs, Topology, Prob. &Stat., Math. Methods ) ?').toLocaleLowerCase();
+let q7 = prompt ('My Favorite Math course is ( linear algebra, Number Theory, ODEs, PDEs, Topology, Prob. &Stat., Math. Methods ) ?');
 
 for( let x=0; x<5;x++){
 
@@ -107,7 +126,10 @@ if (q7==='linear algebra'){
     break;
 }
 else if (q7!=='linear algebra') {
-    prompt ('Your answer is incorrect try again:')
+    alert ('Your answer is incorrect try again:')
+
+    q7 = prompt ('My Favorite Math course is ( linear algebra, Number Theory, ODEs, PDEs, Topology, Prob. &Stat., Math. Methods ) ?');
+
 }
 
 
@@ -116,6 +138,43 @@ else if (q7!=='linear algebra') {
 
 alert ('The correct answer is linear algebra :) !');
 
-alert ('Your final score out of 7 is : '+ counter);
+function shape() {
+    let q8= prompt('Triangle is My favshape ?').toLowerCase();
+
+    while (q8 != 'yes' && q8 != 'y' && q8 != 'no' && q8 != 'n' )
+    {
+        q8= prompt('Input yes or no');
+    }
+
+    switch (q8) {
+        case 'yes':
+        alert ('Your answer is correct!');
+        counter++;
+
+        break;
+        case 'y':
+        alert ('Your answer is correct!');
+        counter++;
+
+        break;
+
+        case 'no':
+        alert ('Your answer is incorrect!');
+        break;
+        case 'n':
+        alert ('Your answer is incorrect!');
+        break;
+        
+    }
+
+    
+}
+
+
+shape();
+
+
+alert ('Your final score out of 8 is : '+ counter);
 
 alert('Thank you '+ userName+' ')
+
